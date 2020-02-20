@@ -6,7 +6,9 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	input = in;
 
 	// initialise game objects
-
+	shroom = new Shroom(hwnd, in);
+	shroom->setSize(sf::Vector2f(100, 100));
+	shroom->setPosition(300, 100);
 }
 
 Level::~Level()
@@ -23,14 +25,14 @@ void Level::handleInput(float dt)
 // Update game objects
 void Level::update(float dt)
 {
-
+	shroom->update(dt);
 }
 
 // Render level
 void Level::render()
 {
 	beginDraw();
-
+	window->draw(*shroom);
 	endDraw();
 }
 

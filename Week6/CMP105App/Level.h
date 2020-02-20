@@ -4,7 +4,7 @@
 #include "Framework/Input.h"
 #include <string.h>
 #include <iostream>
-
+#include "Shroom.h"
 
 class Level{
 public:
@@ -15,6 +15,7 @@ public:
 	void update(float dt);
 	void render();
 
+	Shroom* shroom;
 private:
 	// Default functions for rendering to the screen.
 	void beginDraw();
@@ -25,4 +26,5 @@ private:
 	Input* input;
 
 	// More level variables
+	
 };
